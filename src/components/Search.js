@@ -1,25 +1,27 @@
-import React, {useState} from 'react';
+import React, {useState, useContext } from 'react';
+import GithubContext from '../context/github/githubContext'
 
-const Search = ({ searchUsers }) => {
+const Search = () => {
+
+    const githubContext = useContext(GithubContext)
 
     const [text, setText] = useState('')
  
     const inputChange = (e) => {
         setText(e.target.value)
 
-        // console.log(text)
+        console.log(text)
     }
 
-    const passTextToApp = (e) => {
+    const searchUs = (e) => {
         e.preventDefault()
 
-        searchUsers(text)
-         
+        githubContext.searchUsers(text)
     }
 
 
     return(
-        <form onSubmit={passTextToApp} className="form-container">
+        <form onSubmit={searchUs} className="form-container">
             <label htmlFor="search-input">What user name are you looking for?</label>
             <br />
             <input onChange={inputChange} type="text" id="search-input" />

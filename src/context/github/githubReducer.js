@@ -1,4 +1,4 @@
-import SEARCH_USERS from '../types';
+import { SEARCH_USERS } from '../types';
 
 
 export default (state, action) => {

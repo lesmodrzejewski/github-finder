@@ -1,26 +1,16 @@
-import axios from 'axios';
-import React, {Fragment} from 'react';
+import React from 'react';
 import Navbar from './components/Navbar';
-import Search  from './components/Search'
+import Search from './components/Search';
+import GithubState from './context/github/GithubState';
 
 
 const App = () => {
 
-
-    const searchUsers = async text => {
-
-        const res = await axios.get(`https://api.github.com/search/users?q=${text}`)
-
-        console.log(res);
-    }
-
     return(
-
-        <Fragment>
+        <GithubState>
             <Navbar />
-            <Search searchUsers={searchUsers}/>
-        </Fragment>
-
+            <Search />
+        </GithubState>
     )
 }
 
