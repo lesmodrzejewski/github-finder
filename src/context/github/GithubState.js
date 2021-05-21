@@ -2,12 +2,13 @@ import React, { useReducer } from 'react';
 import GithubContext from './githubContext';
 import GithubReducer from './githubReducer';
 import axios from 'axios';
-import { SEARCH_USERS } from '../types';
+import { SEARCH_USERS, GET_USER } from '../types';
 
 const GithubState = props => {
 
     const initialState = {
-        users: []
+        users: [],
+        user: [],
     }
 
     const [state, dispatch] = useReducer(GithubReducer, initialState)
@@ -24,11 +25,25 @@ const GithubState = props => {
         })
     }
 
+    const getUser = async username => {
+
+        const res = await axios.get(
+            `https://api.github.com/users/${username}`
+          );
+        
+        dispatch({
+            type: GET_USER,
+            payload: res.data
+        })
+    }
+
     return (
         <GithubContext.Provider 
             value={{
-                users: state.users, 
-                searchUsers
+                users: state.users,
+                user: state.user,
+                searchUsers,
+                getUser
             }}
         >
     

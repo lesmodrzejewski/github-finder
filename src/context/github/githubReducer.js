@@ -1,4 +1,4 @@
-import { SEARCH_USERS } from '../types';
+import { SEARCH_USERS, GET_USER } from '../types';
 
 
 export default (state, action) => {
@@ -10,6 +10,11 @@ export default (state, action) => {
                 ...state,
                 users: action.payload
             };
+        case GET_USER:
+            return {
+                ...state,
+                user: action.payload
+            }
 
         default:
             return state;

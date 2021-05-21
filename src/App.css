@@ -1,0 +1,128 @@
+/** @format */
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+/* Global Styles */
+:root {
+  --primary-color: #165b05;
+  --dark-color: #333333;
+  --light-color: #f4f4f4;
+  --danger-color: #f8071f;
+  --success-color: #28a745;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: rgb(174, 175, 174);
+  background-color: #061d00;
+}
+
+a {
+  text-decoration: none;
+  font-size: 1rem;
+  color: rgb(174, 175, 174);
+}
+
+ul {
+  color: rgb(174, 175, 174);
+}
+
+li {
+  text-decoration: none;
+  list-style: none;
+}
+
+button {
+  width: 100px;
+  height: 30px;
+  border-radius: 10px;
+}
+
+.nav-container {
+  width: 100%;
+  height: 20vh;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  /* border: 1px solid red; */
+}
+
+.nav-left {
+  float: left;
+}
+
+.nav-right {
+  float: right;
+  display: flex;
+  justify-content: space-between;
+  width: 7rem;
+  /* border: 1px solid red; */
+}
+
+.form-container {
+  width: 100%;
+  height: 15vw;
+  margin: 1rem;
+  text-align: center;
+  /* border: 1px solid red; */
+}
+
+#search-input {
+  width: 13rem;
+  height: 1.3rem;
+  border-radius: 3px;
+  border: none;
+  margin: 0.2rem;
+}
+
+.search-submit {
+  padding: 0.2rem;
+  border-radius: 3px;
+  border: none;
+}
+
+.users-container {
+  background-color: #061d00;
+  border-radius: 10px;
+  margin: 1rem;
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  border: 1px dotted rgb(109, 108, 108);
+}
+
+.user-container {
+  background-color: #262726;
+  margin: 10px;
+  width: 120px;
+  height: 200px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.user-avatar {
+  margin: 20px;
+  width: 50px;
+  border-radius: 10px;
+}
+
+.user-name {
+  font-size: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.nav-left {
+  float: left;
+}
+
+.nav-right {
+  float: right;
+  display: flex;
+  justify-content: space-between;
+  width: 7rem;
+  /* border: 1px solid red; */
+}
