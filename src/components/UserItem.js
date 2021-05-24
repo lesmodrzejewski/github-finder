@@ -2,12 +2,12 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 
-const UserItem = ({ user: { login, avatar_url, html_url } }) => {
+const UserItem = ({ user: { login, avatar_url, } }) => {
     return(
-        <div className="user-container">
-            <img className="user-avatar" src={avatar_url} alt={login} />
-            <h2 className='user-name'>{login}</h2>
-            <button><Link to={`/user/${login}`}>More</Link></button>
+        <div className="user-item-container">
+            <img className="user-item-avatar" src={avatar_url} alt={login} />
+            <h2 className='user-item-name'>{login}</h2>
+            <button className=""><Link className="user-item-button-font" to={`/user/${login}`}>More</Link></button>
         </div>
     )
 

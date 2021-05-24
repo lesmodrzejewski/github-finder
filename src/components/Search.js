@@ -18,23 +18,28 @@ const Search = () => {
     const searchUs = (e) => {
         e.preventDefault()
 
-        if(!text) {
+        if(text === '') {
             alertContext.setAlert('Please enter something')
         } else {
             githubContext.searchUsers(text)
+            setText('')
         }
 
         
     }
 
-
     return(
-        <form onSubmit={searchUs} className="form-container">
-            <label htmlFor="search-input">What user name are you looking for?</label>
-            <br />
-            <input onChange={inputChange} type="text" id="search-input" />
-            <input type="submit" className="search-submit" value="Search!" />
-        </form>
+        <div>
+            <form onSubmit={searchUs} className="form-container">
+                <label className="search-label" htmlFor="search-input">What user name are you looking for?</label>
+                <input onChange={inputChange} type="text" id="search-input" />
+                <input type="submit" className="search-submit" value="Search!" />
+            </form>
+            {githubContext.users.length > 0 && (<button onClick={githubContext.clearUsers}>Clear Users</button>)}
+            {githubContext.users.length === 0 && ( <h3 className="search-ann">Please enter a user name above. If the user exist you will see it here</h3>)}
+        </div>
+
+
     )
 }
 

@@ -1,4 +1,4 @@
-import { SEARCH_USERS, GET_USER } from '../types';
+import { SEARCH_USERS, GET_USER, CLEAR_USERS } from '../types';
 
 
 export default (state, action) => {
@@ -14,6 +14,12 @@ export default (state, action) => {
             return {
                 ...state,
                 user: action.payload
+            }
+
+        case CLEAR_USERS:
+            return {
+                ...state,
+                users: []
             }
 
         default:
