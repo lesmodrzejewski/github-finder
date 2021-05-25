@@ -2,13 +2,14 @@ import React, { useReducer } from 'react';
 import GithubContext from './githubContext';
 import GithubReducer from './githubReducer';
 import axios from 'axios';
-import { SEARCH_USERS, GET_USER, CLEAR_USERS } from '../types';
+import { SEARCH_USERS, GET_USER, CLEAR_USERS, GET_REPOS } from '../types';
 
 const GithubState = props => {
 
     const initialState = {
         users: [],
-        user: [],
+        user: {},
+        repos: []
     }
 
     const [state, dispatch] = useReducer(GithubReducer, initialState)
@@ -41,6 +42,20 @@ const GithubState = props => {
         })
     }
 
+    const getRepos = async username => {
+        
+        const res = await axios.get(
+            `https://api.github.com/users/${username}/repos?per_page=5&sort=created:asc`
+        )
+
+        console.log(res)
+
+        dispatch({
+            type: GET_REPOS,
+            payload: res.data
+        })
+    }
+
     const clearUsers = () => dispatch({ type: CLEAR_USERS })
 
     return (
@@ -48,8 +63,10 @@ const GithubState = props => {
             value={{
                 users: state.users,
                 user: state.user,
+                repos: state.repos,
                 searchUsers,
                 getUser,
+                getRepos,
                 clearUsers
             }}
         >

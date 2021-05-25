@@ -1,4 +1,4 @@
-import { SEARCH_USERS, GET_USER, CLEAR_USERS } from '../types';
+import { SEARCH_USERS, GET_USER, CLEAR_USERS, GET_REPOS } from '../types';
 
 
 export default (state, action) => {
@@ -14,6 +14,12 @@ export default (state, action) => {
             return {
                 ...state,
                 user: action.payload
+            }
+
+        case GET_REPOS:
+            return {
+                ...state,
+                repos: action.payload
             }
 
         case CLEAR_USERS:

@@ -36,7 +36,7 @@ const Search = () => {
                 <input type="submit" className="search-submit" value="Search!" />
             </form>
             {githubContext.users.length > 0 && (<button onClick={githubContext.clearUsers}>Clear Users</button>)}
-            {githubContext.users.length === 0 && ( <h3 className="search-ann">Please enter a user name above. If the user exist you will see it here</h3>)}
+            {githubContext.users.length === 0 && (<h3 className="search-ann">Please enter a Github user name above to see results below</h3>)}
         </div>
 
 

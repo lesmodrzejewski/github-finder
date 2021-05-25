@@ -54,19 +54,21 @@ button {
 
 .nav-container {
   width: 100%;
-  height: 15vh;
-  padding: 1rem;
+  height: 8vh;
+  background-color: #f4f4f4;
   margin-bottom: 1rem;
-  border: 2px solid red;
+  /* border: 2px solid red; */
 }
 
 .nav-left {
   float: left;
+  padding-left: 0.5rem;
 }
 
 .nav-right {
   float: right;
   display: flex;
+  padding-right: 0.5rem;
   justify-content: space-between;
   width: 7rem;
   /* border: 1px solid red; */
@@ -79,7 +81,7 @@ button {
   text-align: center;
   width: 100%;
   height: 50px;
-  border: 3px solid red;
+  /* border: 3px solid red; */
   border-radius: 2px;
 }
 
@@ -88,7 +90,7 @@ button {
 .form-container {
   width: 100%;
   text-align: center;
-  border: 2px solid red;
+  /* border: 2px solid red; */
 }
 
 .search-label {
@@ -127,7 +129,7 @@ button {
   border: 1px dotted rgb(109, 108, 108);
 }
 
-/* User Item */
+/* User icon */
 
 .user-item-container {
   background-color: #262726;
@@ -156,10 +158,32 @@ button {
 
 /* User page */
 
+.user-container {
+  width: 100%;
+  height: 70vh;
+}
+
 .user-container-left {
   float: left;
-  width: 48%;
+  width: 50%;
+  height: 100%;
   text-align: center;
+  border: 2px solid green;
+}
+
+.user-container-right {
+  float: right;
+  width: 50%;
+  height: 100%;
+  text-align: center;
+  border: 2px solid blue;
+}
+
+.user-container-right-item {
+  background-color: #165b05;
+  width: 40vw;
+  margin: 5px;
+  border-radius: 2px;
 }
 
 .user-avatar-user {
@@ -169,7 +193,10 @@ button {
   border-radius: 10px;
 }
 
-.user-container-right {
-  float: right;
-  text-align: center;
+/* User Repos */
+
+.user-repos {
+  width: 100%;
+  height: 500px;
+  border: 8px solid pink;
 }
