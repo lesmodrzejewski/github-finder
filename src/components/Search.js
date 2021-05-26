@@ -24,8 +24,6 @@ const Search = () => {
             githubContext.searchUsers(text)
             setText('')
         }
-
-        
     }
 
     return(
@@ -35,7 +33,7 @@ const Search = () => {
                 <br />
                 <label className="search-label" htmlFor="search-input"></label>
                 <br />
-                <input onChange={inputChange} type="text" id="search-input" placeholder="What user name are you searching for?" />
+                <input onChange={inputChange} type="text" id="search-input" placeholder="What user name are you searching for?" value={text}/>
                 <input type="submit" className="search-submit" value="Search!" />
             </form>
 

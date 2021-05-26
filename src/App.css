@@ -49,11 +49,13 @@ button {
   padding: 0.2rem;
   border-radius: 2px;
   border: none;
+  transition: 0.7s ease-in-out;
 }
 
 button:hover {
-  background-color: rgb(109, 108, 108);
+  background-color: #dbf8d3;
   color: #262726;
+  cursor: pointer;
 }
 
 /* Nav */
@@ -64,7 +66,7 @@ button:hover {
   background-color: #f4f4f4;
   padding-top: 0.2rem;
   margin-bottom: 1rem;
-  /* border: 2px solid red; */
+  border-top: 1px solid #061d00;
 }
 
 .nav-left {
@@ -151,15 +153,42 @@ button:hover {
   border: none;
 }
 
+input[type='text'] {
+  border: none;
+  background-color: rgb(174, 175, 174);
+}
+
+input[type='text']:focus {
+  background-color: #dbf8d3;
+}
+
+input[type='submit'] {
+  font-size: 0.7rem;
+  background-color: rgb(174, 175, 174);
+  border: none;
+  transition: 0.5s ease-out;
+}
+
+input[type='submit']:hover {
+  background-color: #dbf8d3;
+}
+
+input[type='submit']:active {
+  background-color: #dbf8d3;
+  transform: scale(1.01, 1.01);
+}
+
 .clear-users-button {
-  width: 95%;
+  width: 92%;
   font-size: 0.6rem;
+  margin: auto;
   margin-top: 2rem;
-  padding: 0.5rem;
-  background-color: #061d00;
-  color: rgb(174, 175, 174);
-  border: 1px dotted rgb(109, 108, 108);
-  border-radius: 10px;
+  margin-bottom: 1rem;
+  /* padding: 0.5rem; */
+  background-color: rgb(174, 175, 174);
+  color: #061d00;
+  /* border: 1px dotted rgb(109, 108, 108); */
+  border-radius: 2px;
 }
 
 .search-ann {
@@ -171,9 +200,10 @@ button:hover {
 /* Users */
 
 .users-container {
+  width: 95%;
   background-color: #061d00;
   border-radius: 10px;
-  margin: 1rem;
+  margin: auto;
   display: grid;
   grid-template-columns: auto auto auto auto auto;
   /* border: 1px dotted rgb(109, 108, 108); */
@@ -203,12 +233,13 @@ button:hover {
 }
 
 .user-item-button {
-  background-color: #262726;
-  color: rgb(174, 175, 174);
+  background-color: rgb(174, 175, 174);
+  color: #061d00;
   border: 1px dotted rgb(109, 108, 108);
+  cursor: pointer;
 }
 
-.user-item-button-font {
+.user-item-button-link {
   font-size: 0.65rem;
   color: rgb(174, 175, 174);
 }
@@ -216,19 +247,42 @@ button:hover {
 /* User page */
 
 .back-to-search {
-  padding-left: 0.5rem;
+  width: 100%;
   margin-bottom: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.back-to-search button {
+  width: 95%;
+  background-color: rgb(174, 175, 174);
+  text-align: left;
+}
+
+.back-to-search button:hover {
+  background-color: #dbf8d3;
+  color: #262726;
+  cursor: pointer;
 }
 
 .fa-chevron-circle-left {
   padding-right: 0.3rem;
+  color: #061d00;
+}
+
+.back-to-search-link {
+  width: 95%;
+  color: #061d00;
+  text-align: left;
 }
 
 .user-container {
-  width: 100%;
+  width: 95%;
   height: 80vh;
-  border-top: 1px dotted rgb(109, 108, 108);
-  border-bottom: 1px dotted rgb(109, 108, 108);
+  border: 1px dotted rgb(109, 108, 108);
+  margin: auto;
+  /* border-bottom: 1px dotted rgb(109, 108, 108); */
 }
 
 .user-container-left {
@@ -236,7 +290,7 @@ button:hover {
   width: 50%;
   height: 100%;
   text-align: center;
-  /* border: 2px solid green; */
+  border-right: 1px dotted rgb(109, 108, 108);
 }
 
 .bio-p {
@@ -254,13 +308,17 @@ button:hover {
 .user-container-right-header {
   margin: auto;
   margin-top: 1rem;
-  background-color: #262726;
   width: 40vw;
   text-align: center;
 }
 
-.user-container-right-header-link {
-  font-size: 1.5rem;
+.user-container-right-header-button {
+  width: 100%;
+  background-color: rgb(174, 175, 174);
+}
+
+.user-container-right-header-a {
+  color: #061d00;
 }
 
 .user-info-container {
@@ -278,6 +336,7 @@ button:hover {
   font-size: 0.75rem;
   width: 19vw;
   margin: 5px;
+  border-bottom: 1px dotted rgb(109, 108, 108);
   border-radius: 2px;
 }
 
@@ -295,20 +354,18 @@ button:hover {
 /* User Repos */
 
 .user-repos {
-  width: 100%;
+  width: 95%;
   height: 10rem;
-  margin-top: 1rem;
-  border-bottom: 1px dotted rgb(109, 108, 108);
+  margin: auto;
+  margin-bottom: 1rem;
+  border: 1px dotted rgb(109, 108, 108);
 
   /* border: 8px solid pink; */
 }
 
-.repo-item a {
-  color: rgb(174, 175, 174);
-}
-
 .repos-header {
   text-align: center;
+  margin-top: 1rem;
   margin-bottom: 1rem;
 }
 

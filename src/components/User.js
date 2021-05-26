@@ -31,7 +31,7 @@ const User = ({ match }) => {
 
         <Fragment>
             <div className="back-to-search">
-                <Link to="/"><i class="fas fa-chevron-circle-left"></i>Back to search</Link>
+                <button><Link to="/" className="back-to-search-link"><i class="fas fa-chevron-circle-left"></i>Back to search</Link></button>
             </div>
 
             <div className="user-container">
@@ -46,7 +46,7 @@ const User = ({ match }) => {
                 <ul className="user-container-right">
 
                     <div className="user-container-right-header">
-                        <h5><a className="user-container-right-header-link" href={html_url}>Visit my website</a></h5>
+                        <a className="user-container-right-header-a" href={html_url}><button className="user-container-right-header-button">Visit my website</button></a>
                     </div>
 
                     <div className="user-info-container">
@@ -67,7 +67,7 @@ const User = ({ match }) => {
 
             <div className="user-repos">
                 <div className="user-repos-container">
-                    <div className="repos-header"><h2>Click to get a repo: </h2></div>
+                    <div className="repos-header"><h2>Click to see repos: </h2></div>
                     <div className="repo-items">
                         <Repos repos={repos}/>
                     </div>                 

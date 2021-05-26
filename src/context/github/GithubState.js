@@ -24,8 +24,6 @@ const GithubState = props => {
             type: SEARCH_USERS,
             payload: res.data.items
         })
-
-        text = ''
     }
 
     const getUser = async username => {
