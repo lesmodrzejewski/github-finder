@@ -19,9 +19,9 @@ const App = () => {
         <GithubState>
             <AlertState>
                 <Router>
-                    <div>
+                    <div className="app">
                         <Navbar />
-                        <div>
+                        <div className="app-content">
                             <Alert />
                             <Switch>
                                 <Route exact path='/' component={Home} />

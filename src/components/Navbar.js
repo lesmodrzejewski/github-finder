@@ -5,10 +5,10 @@ const Navbar = () => {
     return (
         <Fragment>
             <div className="nav-container">
-                <h3 className="nav-left">GITHUB FINDER</h3>
+                <h3 className="nav-left"><i class="fab fa-github-square github-nav"></i>Github Finder</h3>
                 <ul className="nav-right">
-                    <li><Link to='/'>Home</Link></li>
-                    <li><Link to='/about'>About</Link></li>
+                    <li><Link to='/' className="nav-right-item">Home</Link></li>
+                    <li><Link to='/about' className="nav-right-item">About</Link></li>
                 </ul>
             </div>
         </Fragment>

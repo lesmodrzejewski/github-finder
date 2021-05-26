@@ -7,7 +7,7 @@ const UserItem = ({ user: { login, avatar_url, } }) => {
         <div className="user-item-container">
             <img className="user-item-avatar" src={avatar_url} alt={login} />
             <h2 className='user-item-name'>{login}</h2>
-            <button className=""><Link className="user-item-button-font" to={`/user/${login}`}>More</Link></button>
+            <button className="user-item-button"><Link className="user-item-button-font" to={`/user/${login}`}>More</Link></button>
         </div>
     )
 

@@ -21,7 +21,7 @@ body {
   line-height: 1.6;
   color: rgb(174, 175, 174);
   background-color: #061d00;
-  border: 2px solid orange;
+  /* border: 2px solid orange; */
 }
 
 p {
@@ -30,7 +30,7 @@ p {
 
 a {
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 0.75rem;
   color: rgb(174, 175, 174);
 }
 
@@ -44,10 +44,16 @@ li {
 }
 
 button {
-  width: 100px;
-  height: 20px;
-  border: none;
+  width: 5rem;
+  font-size: 0.6rem;
+  padding: 0.2rem;
   border-radius: 2px;
+  border: none;
+}
+
+button:hover {
+  background-color: rgb(109, 108, 108);
+  color: #262726;
 }
 
 /* Nav */
@@ -56,6 +62,7 @@ button {
   width: 100%;
   height: 8vh;
   background-color: #f4f4f4;
+  padding-top: 0.2rem;
   margin-bottom: 1rem;
   /* border: 2px solid red; */
 }
@@ -63,6 +70,10 @@ button {
 .nav-left {
   float: left;
   padding-left: 0.5rem;
+}
+
+.github-nav {
+  padding-right: 1rem;
 }
 
 .nav-right {
@@ -74,13 +85,34 @@ button {
   /* border: 1px solid red; */
 }
 
+.nav-right-item {
+  font-size: 0.9rem;
+  color: #061d00;
+  padding-right: 0.5rem;
+}
+
+.nav-container h3 {
+  font-size: 0.9rem;
+  color: #061d00;
+}
+
+/* App content */
+
+.app-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  /* border: 3px solid red; */
+}
+
 /* Alert */
 
 .alert-container {
   background-color: rgba(255, 0, 0, 0.475);
   text-align: center;
   width: 100%;
-  height: 50px;
+  height: 1.5rem;
   /* border: 3px solid red; */
   border-radius: 2px;
 }
@@ -91,6 +123,10 @@ button {
   width: 100%;
   text-align: center;
   /* border: 2px solid red; */
+}
+
+.github-search {
+  font-size: 7rem;
 }
 
 .search-label {
@@ -104,18 +140,32 @@ button {
   border-radius: 2px;
   border: none;
   margin: 0.2rem;
+  padding-left: 0.5rem;
+  font-size: 0.6rem;
 }
 
 .search-submit {
-  font-size: 0.8rem;
+  font-size: 0.6rem;
   padding: 0.2rem;
   border-radius: 2px;
   border: none;
 }
 
+.clear-users-button {
+  width: 95%;
+  font-size: 0.6rem;
+  margin-top: 2rem;
+  padding: 0.5rem;
+  background-color: #061d00;
+  color: rgb(174, 175, 174);
+  border: 1px dotted rgb(109, 108, 108);
+  border-radius: 10px;
+}
+
 .search-ann {
   text-align: center;
   padding-top: 30px;
+  font-size: 0.9rem;
 }
 
 /* Users */
@@ -126,17 +176,18 @@ button {
   margin: 1rem;
   display: grid;
   grid-template-columns: auto auto auto auto auto;
-  border: 1px dotted rgb(109, 108, 108);
+  /* border: 1px dotted rgb(109, 108, 108); */
 }
 
-/* User icon */
+/* User card */
 
 .user-item-container {
-  background-color: #262726;
+  /* background-color: #262726; */
   margin: 10px;
   width: 115px;
   height: 200px;
   text-align: center;
+  border: 1px dotted grey;
   border-radius: 2px;
 }
 
@@ -151,16 +202,33 @@ button {
   margin-bottom: 1rem;
 }
 
+.user-item-button {
+  background-color: #262726;
+  color: rgb(174, 175, 174);
+  border: 1px dotted rgb(109, 108, 108);
+}
+
 .user-item-button-font {
-  font-size: 0.75rem;
-  color: #061d00;
+  font-size: 0.65rem;
+  color: rgb(174, 175, 174);
 }
 
 /* User page */
 
+.back-to-search {
+  padding-left: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.fa-chevron-circle-left {
+  padding-right: 0.3rem;
+}
+
 .user-container {
   width: 100%;
-  height: 70vh;
+  height: 80vh;
+  border-top: 1px dotted rgb(109, 108, 108);
+  border-bottom: 1px dotted rgb(109, 108, 108);
 }
 
 .user-container-left {
@@ -168,22 +236,53 @@ button {
   width: 50%;
   height: 100%;
   text-align: center;
-  border: 2px solid green;
+  /* border: 2px solid green; */
+}
+
+.bio-p {
+  padding: 1rem;
 }
 
 .user-container-right {
+  position: relative;
   float: right;
   width: 50%;
   height: 100%;
+  /* border: 2px solid blue; */
+}
+
+.user-container-right-header {
+  margin: auto;
+  margin-top: 1rem;
+  background-color: #262726;
+  width: 40vw;
   text-align: center;
-  border: 2px solid blue;
+}
+
+.user-container-right-header-link {
+  font-size: 1.5rem;
+}
+
+.user-info-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: space-around;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: 1rem;
 }
 
 .user-container-right-item {
-  background-color: #165b05;
-  width: 40vw;
+  font-size: 0.75rem;
+  width: 19vw;
   margin: 5px;
   border-radius: 2px;
+}
+
+.user-container-right-item li {
+  font-size: 0.2rem;
 }
 
 .user-avatar-user {
@@ -197,6 +296,24 @@ button {
 
 .user-repos {
   width: 100%;
-  height: 500px;
-  border: 8px solid pink;
+  height: 10rem;
+  margin-top: 1rem;
+  border-bottom: 1px dotted rgb(109, 108, 108);
+
+  /* border: 8px solid pink; */
+}
+
+.repo-item a {
+  color: rgb(174, 175, 174);
+}
+
+.repos-header {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.repo-items {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  justify-content: space-around;
 }

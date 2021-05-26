@@ -11,7 +11,7 @@ const Alert = () => {
     return(
         alert !== null && (
             <div className="alert-container">
-                <h1>{alert.msg}</h1> 
+                <h5>{alert.msg}</h5> 
             </div>
         )
     )

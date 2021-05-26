@@ -45,7 +45,7 @@ const GithubState = props => {
     const getRepos = async username => {
         
         const res = await axios.get(
-            `https://api.github.com/users/${username}/repos?per_page=5&sort=created:asc`
+            `https://api.github.com/users/${username}/repos?per_page=9&sort=created:asc`
         )
 
         console.log(res)
