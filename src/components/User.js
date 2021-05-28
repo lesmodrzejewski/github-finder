@@ -43,35 +43,38 @@ const User = ({ match }) => {
                     <p className="bio-p">{bio}</p>                            
                 </div>
 
-                <ul className="user-container-right">
+                <div className="user-container-right">
 
-                    <div className="user-container-right-header">
+                    <div className="user-container-right-visit">
                         <a className="user-container-right-header-a" href={html_url}><button className="user-container-right-header-button">Visit my website</button></a>
                     </div>
 
                     <div className="user-info-container">
-                        <li className="user-container-right-item">Hireable: </li>
-                        <li className="user-container-right-item">{isHirable}</li>
-                        <li className="user-container-right-item">Followers:</li>
-                        <li className="user-container-right-item">{followers}</li>
-                        <li className="user-container-right-item">Following</li>
-                        <li className="user-container-right-item">{following}</li>
-                        <li className="user-container-right-item">Public Gists:</li>
-                        <li className="user-container-right-item">{public_gists}</li>
-                        <li className="user-container-right-item">Public Repos:</li>    
-                        <li className="user-container-right-item">{public_repos}</li>    
+                            <p className="user-container-right-item">Hireable: </p>
+                            <p className="user-container-right-item">{isHirable}</p>
+                            <p className="user-container-right-item">Followers:</p>
+                            <p className="user-container-right-item">{followers}</p>
+                            <p className="user-container-right-item">Following</p>
+                            <p className="user-container-right-item">{following}</p>
+                            <p className="user-container-right-item">Public Gists:</p>
+                            <p className="user-container-right-item">{public_gists}</p>
+                            <p className="user-container-right-item">Public Repos:</p>    
+                            <p className="user-container-right-item">{public_repos}</p>
                     </div>
+                </div>
 
-                </ul>
+                
             </div>
 
             <div className="user-repos">
-                <div className="user-repos-container">
-                    <div className="repos-header"><h2>Click to see repos: </h2></div>
-                    <div className="repo-items">
-                        <Repos repos={repos}/>
-                    </div>                 
-                </div>
+                        <div className="user-repos-container">
+                            <div className="repos-header">
+                                <h2>Click to see repos: </h2>
+                            </div>
+                            <div className="repo-items">
+                            <Repos repos={repos}/>
+                            </div>                 
+                        </div>
             </div>
 
         </Fragment>
