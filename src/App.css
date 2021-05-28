@@ -1,13 +1,13 @@
 /** @format */
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 /* Global Styles */
-:root {
+/* :root {
   --primary-color: #165b05;
   --dark-color: #333333;
   --light-color: #f4f4f4;
   --danger-color: #f8071f;
   --success-color: #28a745;
-}
+} */
 
 * {
   box-sizing: border-box;
@@ -56,12 +56,6 @@ button:hover {
   background-color: #dbf8d3;
   color: #262726;
   cursor: pointer;
-}
-
-/* App content */
-
-.app {
-  /* min-width: 500px; */
 }
 
 /* Nav */
@@ -220,7 +214,7 @@ input[type='submit']:active {
   /* background-color: #262726; */
   margin: auto;
   margin-top: 10px;
-  width: 115px;
+  width: 110px;
   height: auto;
   text-align: center;
   border: 1px dotted grey;
@@ -254,14 +248,22 @@ input[type='submit']:active {
 /* User page */
 
 .back-to-search {
-  width: 100%;
+  width: 95%;
+  margin: auto;
   margin-bottom: 1rem;
+  border-radius: 2px;
   display: flex;
   flex-direction: row;
   justify-content: center;
+  background-color: rgb(174, 175, 174);
+  transition: 0.7s ease-in-out;
 }
 
-.back-to-search button {
+.back-to-search:hover {
+  background-color: #dbf8d3;
+}
+
+/* .back-to-search button {
   width: 95%;
   background-color: rgb(174, 175, 174);
   text-align: left;
@@ -271,22 +273,23 @@ input[type='submit']:active {
   background-color: #dbf8d3;
   color: #262726;
   cursor: pointer;
-}
+} */
 
 .fa-chevron-circle-left {
   padding-right: 0.3rem;
-  color: #061d00;
+  color: #262726; /* border: 2px solid rgb(174, 175, 174); */
 }
 
 .back-to-search-link {
   width: 95%;
-  color: #061d00;
+  color: #262726;
   text-align: left;
+  /* border: 2px solid rgb(174, 175, 174); */
 }
 
 .user-container {
   width: 95%;
-  height: 400px;
+  height: 350px;
   border: 1px dotted rgb(109, 108, 108);
   margin: auto;
   border-bottom: 1px dotted rgb(109, 108, 108);
@@ -386,5 +389,20 @@ input[type='submit']:active {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
   padding-left: 1.5rem;
-  padding-bottom: 0.5rem;
+}
+
+/* Media Querries */
+
+@media (max-width: 500px) {
+  h2 {
+    font-size: 1rem;
+  }
+
+  p {
+    font-size: 0.5rem;
+  }
+
+  a {
+    font-size: 0.5rem;
+  }
 }
