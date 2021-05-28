@@ -118,7 +118,7 @@ button:hover {
 }
 
 .github-search {
-  font-size: 7rem;
+  font-size: 4rem;
 }
 
 .search-label {
@@ -199,6 +199,8 @@ input[type='submit']:active {
   grid-gap: 0.5rem;
   align-items: center;
   grid-template-columns: repeat(auto-fit, minmax(115px, 1fr));
+  padding-bottom: 1rem;
+
   /* border: 1px dotted rgb(109, 108, 108); */
 }
 
@@ -292,7 +294,8 @@ input[type='submit']:active {
   height: 350px;
   border: 1px dotted rgb(109, 108, 108);
   margin: auto;
-  border-bottom: 1px dotted rgb(109, 108, 108);
+  border-bottom: none;
+  border-radius: 2px;
 }
 
 .user-container-left {
@@ -324,7 +327,7 @@ input[type='submit']:active {
 
 .user-container-right-visit {
   margin: auto;
-  margin-top: 3rem;
+  margin-top: 2rem;
   width: 85%;
   /* border: 5px solid orange; */
 }
@@ -372,11 +375,11 @@ input[type='submit']:active {
   margin-top: none;
   margin-bottom: 1rem;
   border: 1px dotted rgb(109, 108, 108);
-  border-top: none;
 }
 
 .user-repos-container {
   margin: auto;
+  padding-bottom: 0.5rem;
 }
 
 .repos-header {
@@ -388,6 +391,7 @@ input[type='submit']:active {
 .repo-items {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  grid-gap: 0.5rem;
   padding-left: 1.5rem;
 }
 

@@ -9,6 +9,7 @@ import Home from './components/Home'
 import Alert from './components/Alert';
 import User from './components/User'
 import About from './components/About'
+import NotFound from './components/NotFound'
 
 import './App.css';
 
@@ -27,6 +28,7 @@ const App = () => {
                                 <Route exact path='/' component={Home} />
                                 <Route exact path='/about' component={About} />
                                 <Route exact path='/user/:login' component={User} />
+                                <Route component={NotFound} />
                             </Switch>   
                         </div>
                     </div>
