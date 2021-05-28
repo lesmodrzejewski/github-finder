@@ -31,7 +31,7 @@ const User = ({ match }) => {
 
         <Fragment>
             <div className="back-to-search">
-                <button><Link to="/" className="back-to-search-link"><i class="fas fa-chevron-circle-left"></i>Back to search</Link></button>
+                <button><Link to="/" className="back-to-search-link"><i className="fas fa-chevron-circle-left"></i>Back to search</Link></button>
             </div>
 
             <div className="user-container">

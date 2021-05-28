@@ -29,7 +29,7 @@ const Search = () => {
     return(
         <div className="form-container">
             <form onSubmit={searchUs}>
-                <i class="fab fa-github-square github-search"></i>
+                <i className="fab fa-github-square github-search"></i>
                 <br />
                 <label className="search-label" htmlFor="search-input"></label>
                 <br />

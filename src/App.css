@@ -209,6 +209,12 @@ input[type='submit']:active {
   /* border: 1px dotted rgb(109, 108, 108); */
 }
 
+.spinner {
+  dispaly: block;
+  width: 150;
+  margin: auto;
+}
+
 /* User card */
 
 .user-item-container {
@@ -315,6 +321,7 @@ input[type='submit']:active {
 .user-container-right-header-button {
   width: 100%;
   background-color: rgb(174, 175, 174);
+  font-size: 1rem;
 }
 
 .user-container-right-header-a {
@@ -359,6 +366,7 @@ input[type='submit']:active {
   margin: auto;
   margin-bottom: 1rem;
   border: 1px dotted rgb(109, 108, 108);
+  border-top: none;
 
   /* border: 8px solid pink; */
 }
