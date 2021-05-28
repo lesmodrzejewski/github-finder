@@ -10,7 +10,7 @@ const Users = () => {
 
     const { users, loading } = githubContext
 
-    if(loading) return Spinner
+    if(loading) return <Spinner />;
     else {
         return(
             <div className="users-container">

@@ -17,7 +17,7 @@ const GithubState = props => {
 
     const searchUsers = async text => {
 
-
+        setLoading();
 
         const res = await axios.get(`https://api.github.com/search/users?q=${text}`)
 
@@ -30,6 +30,8 @@ const GithubState = props => {
     }
 
     const getUser = async username => {
+
+        setLoading();
 
         const res = await axios.get(
             `https://api.github.com/users/${username}`
@@ -44,6 +46,8 @@ const GithubState = props => {
     }
 
     const getRepos = async username => {
+
+        setLoading();
         
         const res = await axios.get(
             `https://api.github.com/users/${username}/repos?per_page=9&sort=created:asc`
@@ -60,8 +64,6 @@ const GithubState = props => {
     const setLoading = () => dispatch({ type: SET_LOADING })
 
     const clearUsers = () => dispatch({ type: CLEAR_USERS })
-
-
 
     return (
         <GithubContext.Provider 
