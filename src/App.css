@@ -387,6 +387,12 @@ input[type='submit']:active {
   padding-left: 1.5rem;
 }
 
+/* About page */
+
+.about {
+  text-align: center;
+}
+
 /* Media Querries */
 
 @media (max-width: 500px) {
