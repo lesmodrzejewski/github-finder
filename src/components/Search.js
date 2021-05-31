@@ -11,8 +11,6 @@ const Search = () => {
  
     const inputChange = (e) => {
         setText(e.target.value)
-
-        console.log(text)
     }
 
     const searchUs = (e) => {

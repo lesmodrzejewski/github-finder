@@ -20,8 +20,6 @@ const GithubState = props => {
         setLoading();
 
         const res = await axios.get(`https://api.github.com/search/users?q=${text}`)
-
-        console.log(res);
     
         dispatch({
             type: SEARCH_USERS,
@@ -36,8 +34,6 @@ const GithubState = props => {
         const res = await axios.get(
             `https://api.github.com/users/${username}`
           );
-
-        console.log(res);
         
         dispatch({
             type: GET_USER,
@@ -52,8 +48,6 @@ const GithubState = props => {
         const res = await axios.get(
             `https://api.github.com/users/${username}/repos?per_page=9&sort=created:asc`
         )
-
-        console.log(res)
 
         dispatch({
             type: GET_REPOS,

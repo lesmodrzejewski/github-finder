@@ -8,8 +8,6 @@ import GithubContext from '../context/github/githubContext';
 
 const User = ({ match }) => {
 
-    console.log(match);
-
     const githubContext = useContext(GithubContext)
 
     const { user, repos, getUser, getRepos } = githubContext
@@ -20,7 +18,6 @@ const User = ({ match }) => {
         // eslint-disable-next-line
     }, [])
 
-    console.log(user);
 
     const { name, company, location, avatar_url, bio, followers, following, public_gists, public_repos, html_url, hireable} = user
 
@@ -50,16 +47,16 @@ const User = ({ match }) => {
                     </div>
 
                     <div className="user-info-container">
-                            <p className="user-container-right-item">Hireable: </p>
-                            <p className="user-container-right-item">{isHirable}</p>
-                            <p className="user-container-right-item">Followers:</p>
-                            <p className="user-container-right-item">{followers}</p>
-                            <p className="user-container-right-item">Following</p>
-                            <p className="user-container-right-item">{following}</p>
-                            <p className="user-container-right-item">Public Gists:</p>
-                            <p className="user-container-right-item">{public_gists}</p>
-                            <p className="user-container-right-item">Public Repos:</p>    
-                            <p className="user-container-right-item">{public_repos}</p>
+                            <p className="user-info-container-right-item">Hireable: </p>
+                            <p className="user-info-container-right-item">{isHirable}</p>
+                            <p className="user-info-container-right-item">Followers:</p>
+                            <p className="user-info-container-right-item">{followers}</p>
+                            <p className="user-info-container-right-item">Following</p>
+                            <p className="user-info-container-right-item">{following}</p>
+                            <p className="user-info-container-right-item">Public Gists:</p>
+                            <p className="user-info-container-right-item">{public_gists}</p>
+                            <p className="user-info-container-right-item">Public Repos:</p>    
+                            <p className="user-info-container-right-item">{public_repos}</p>
                     </div>
                 </div>
 
