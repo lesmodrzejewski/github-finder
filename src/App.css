@@ -20,6 +20,7 @@
 }
 
 body {
+  min-width: 375px;
   font-family: 'Lato', sans-serif;
   font-size: 1rem;
   line-height: 1.6;
@@ -65,16 +66,16 @@ button:hover {
 
 .nav-container {
   width: 100%;
-  height: 8vh;
-  background-color: #f4f4f4;
+  height: 5rem;
   padding-top: 0.2rem;
-  margin-bottom: 1rem;
-  border-top: 1px solid var(--primary-color);
+  background-color: #f4f4f4;
+  margin-bottom: 2rem;
 }
 
 .nav-left {
   float: left;
-  padding-left: 0.5rem;
+  height: 100%;
+  padding-left: 1rem;
 }
 
 .github-nav {
@@ -83,21 +84,24 @@ button:hover {
 
 .nav-right {
   float: right;
+  width: 200px;
+  height: 100%;
   display: flex;
-  padding-right: 0.5rem;
-  justify-content: space-between;
-  width: 7rem;
-  /* border: 1px solid red; */
+  justify-content: space-around;
+  align-items: center;
 }
 
 .nav-right-item {
-  font-size: 0.7rem;
+  font-size: 1.5rem;
   color: var(--primary-color);
-  padding-right: 0.5rem;
+}
+
+.nav-right-item:hover {
+  border-bottom: 1px solid var(--primary-color);
 }
 
 .nav-container h3 {
-  font-size: 0.9rem;
+  font-size: 2.5rem;
   color: var(--primary-color);
 }
 
@@ -107,10 +111,14 @@ button:hover {
   background-color: var(--danger-color);
   text-align: center;
   width: 92%;
-  height: 1.5rem;
+  height: 2.5rem;
   border-radius: 2px;
   margin: auto;
   margin-bottom: 2rem;
+}
+
+.alert-container h5 {
+  font-size: 1.5rem;
 }
 
 /* Search */
@@ -118,11 +126,10 @@ button:hover {
 .form-container {
   width: 100%;
   text-align: center;
-  /* border: 2px solid red; */
 }
 
-.github-search {
-  font-size: 4rem;
+.github-search-icon {
+  font-size: 10rem;
 }
 
 .search-label {
@@ -131,20 +138,20 @@ button:hover {
 }
 
 #search-input {
-  width: 13rem;
-  height: 1.3rem;
+  width: 25rem;
+  height: 3rem;
   border-radius: 2px;
   border: none;
   margin: 0.2rem;
-  padding-left: 0.5rem;
-  font-size: 0.6rem;
+  padding-left: 1.2rem;
+  font-size: 1.25rem;
 }
 
 .search-submit {
-  font-size: 0.6rem;
-  padding: 0.2rem;
-  border-radius: 2px;
+  height: 3rem;
+  padding: 0 1.5rem;
   border: none;
+  border-radius: 2px;
 }
 
 input[type='text'] {
@@ -157,7 +164,7 @@ input[type='text']:focus {
 }
 
 input[type='submit'] {
-  font-size: 0.7rem;
+  font-size: 1.25rem;
   background-color: var(--secondary-color);
   border: none;
   transition: 0.5s ease-out;
@@ -174,7 +181,7 @@ input[type='submit']:active {
 
 .clear-users-button {
   width: 92%;
-  font-size: 0.6rem;
+  font-size: 1.25rem;
   margin: auto;
   margin-top: 2rem;
   margin-bottom: 1rem;
@@ -187,13 +194,15 @@ input[type='submit']:active {
   text-align: center;
   padding: 1rem;
   padding-top: 2rem;
-  font-size: 0.9rem;
+  font-size: 1.7rem;
 }
 
 /* Spinner */
 
 .spinner {
-  width: 150px;
+  display: block;
+  width: 150;
+  margin: auto;
 }
 
 /* Users */
@@ -204,38 +213,32 @@ input[type='submit']:active {
   background-color: var(--primary-color);
   border-radius: 10px;
   display: grid;
-  grid-gap: 0.5rem;
+  grid-gap: 0.1rem;
   align-items: center;
-  grid-template-columns: repeat(auto-fit, minmax(115px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   padding-bottom: 1rem;
-}
-
-.spinner {
-  display: block;
-  width: 150;
-  margin: auto;
 }
 
 /* User card */
 
 .user-item-container {
+  width: 200px;
+  height: auto;
   margin: auto;
   margin-top: 10px;
-  width: 110px;
-  height: auto;
   text-align: center;
-  border: 1px dotted var(--dark-color);
+  border: 1px dotted var(--secondary-color);
   border-radius: 2px;
 }
 
 .user-item-avatar {
   margin: 1rem;
-  width: 50px;
+  width: 125px;
   border-radius: 10px;
 }
 
 .user-item-name {
-  font-size: 0.75rem;
+  font-size: 1.5rem;
   margin-bottom: 1rem;
 }
 
@@ -245,10 +248,10 @@ input[type='submit']:active {
   border: 1px dotted var(--grey-color);
   cursor: pointer;
   margin-bottom: 1rem;
+  font-size: 1.25rem;
 }
 
 .user-item-button-link {
-  font-size: 0.65rem;
   color: var(--secondary-color);
 }
 
@@ -271,7 +274,7 @@ input[type='submit']:active {
 }
 
 .fa-chevron-circle-left {
-  padding-right: 0.3rem;
+  padding-right: 0.5rem;
   color: var(--dark-color);
 }
 
@@ -279,16 +282,32 @@ input[type='submit']:active {
   width: 92%;
   color: var(--dark-color);
   text-align: left;
-  font-size: 0.6rem;
+  font-size: 1.25rem;
 }
 
 .user-container {
   width: 95%;
-  height: 350px;
+  height: 400px;
   border: 1px dotted var(--grey-color);
   margin: auto;
   border-bottom: none;
   border-radius: 2px;
+}
+
+.user-container h3 {
+  font-size: 1.5rem;
+}
+
+.user-container h4 {
+  font-size: 1.25rem;
+}
+
+.user-container h5 {
+  font-size: 1.1rem;
+}
+
+.user-container p {
+  font-size: 0.8rem;
 }
 
 .user-container-left {
@@ -302,7 +321,7 @@ input[type='submit']:active {
 
 .user-avatar-user {
   margin: 20px;
-  width: 100px;
+  width: 150px;
   border: 2px solid var(--secondary-color);
   border-radius: 10px;
 }
@@ -328,7 +347,7 @@ input[type='submit']:active {
 .user-container-right-header-button {
   width: 100%;
   background-color: var(--secondary-color);
-  font-size: 1rem;
+  font-size: 1.25rem;
 }
 
 .user-container-right-header-a {
@@ -347,7 +366,7 @@ input[type='submit']:active {
 }
 
 .user-info-container-right-item {
-  font-size: 0.75rem;
+  font-size: 1.1rem;
   width: 19vw;
   margin: 5px;
   border-bottom: 1px dotted var(--grey-color);
@@ -382,9 +401,10 @@ input[type='submit']:active {
 
 .repo-items {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   grid-gap: 0.5rem;
-  padding-left: 1.5rem;
+  padding-left: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
 /* About page */
@@ -395,7 +415,7 @@ input[type='submit']:active {
 
 /* Media Querries */
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   h2 {
     font-size: 1rem;
   }
@@ -413,7 +433,7 @@ input[type='submit']:active {
   }
 
   p {
-    font-size: 0.55rem;
+    font-size: 0.5rem;
   }
 
   a {
@@ -422,5 +442,65 @@ input[type='submit']:active {
 
   li {
     font-size: 0.55rem;
+  }
+
+  .user-container h3 {
+    font-size: 1.2rem;
+  }
+
+  .user-container h4 {
+    font-size: 1rem;
+  }
+
+  .user-container h5 {
+    font-size: 0.9rem;
+  }
+
+  .user-container p {
+    font-size: 0.75rem;
+  }
+
+  /* Nav */
+
+  .nav-container {
+    width: 100%;
+    height: 3rem;
+    padding-top: 0.2rem;
+    background-color: #f4f4f4;
+    margin-bottom: 2rem;
+  }
+
+  .nav-left {
+    float: left;
+    height: 100%;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+
+  .github-nav {
+    padding-right: 1rem;
+  }
+
+  .nav-right {
+    float: right;
+    width: 30%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .nav-right-item {
+    font-size: 1rem;
+    color: var(--primary-color);
+  }
+
+  .nav-right-item:hover {
+    border-bottom: 1px solid var(--primary-color);
+  }
+
+  .nav-container h3 {
+    font-size: 1.5rem;
+    color: var(--primary-color);
   }
 }
